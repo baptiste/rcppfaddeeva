@@ -3,8 +3,7 @@ Type: Package
 Title: Rcpp Bindings for Faddeeva Library
 Version: 0.0.1
 Date: 2015-06-05
-Author: Dirk Eddelbuettel
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Authors@R: c(person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = c("aut", "cre")), person("Steven", "Johnson", "G.", role = c("aut")), person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",role = c("aut")))
 Description: Access to Error functions for various arbitrary complex
  arguments is provided via the Faddeeva package by Steven G. Johnson.
 License: GPL (>= 2)

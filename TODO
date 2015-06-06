@@ -1,0 +1,4 @@
+* wrap all functions
+* include a vectorised interface
+* include tests
+* include a Voigt function
