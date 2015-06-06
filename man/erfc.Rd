@@ -4,12 +4,12 @@
 \alias{erfc}
 \title{compute erfc(z) = 1 - erf(z), the complementary error function}
 \usage{
-erfc(z_, relerr = 0)
+erfc(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector

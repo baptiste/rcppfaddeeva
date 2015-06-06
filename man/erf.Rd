@@ -4,12 +4,12 @@
 \alias{erf}
 \title{compute erf(z), the error function of complex arguments}
 \usage{
-erf(z_, relerr = 0)
+erf(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector

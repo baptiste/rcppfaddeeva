@@ -9,8 +9,8 @@
 #' @useDynLib RcppFaddeeva
 #' @importFrom Rcpp evalCpp
 #' @export
-erfcx <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z_, relerr)
+erfcx <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' compute erf(z), the error function of complex arguments
@@ -19,8 +19,8 @@ erfcx <- function(z_, relerr = 0) {
 #' @param relerr double, requested error
 #' @return complex vector
 #' @export
-erf <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z_, relerr)
+erf <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' compute erfi(z) = -i erf(iz), the imaginary error function
@@ -29,8 +29,8 @@ erf <- function(z_, relerr = 0) {
 #' @param relerr double, requested error
 #' @return complex vector
 #' @export
-erfi <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_erfi', PACKAGE = 'RcppFaddeeva', z_, relerr)
+erfi <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_erfi', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' compute erfc(z) = 1 - erf(z), the complementary error function
@@ -39,8 +39,8 @@ erfi <- function(z_, relerr = 0) {
 #' @param relerr double, requested error
 #' @return complex vector
 #' @export
-erfc <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_erfc', PACKAGE = 'RcppFaddeeva', z_, relerr)
+erfc <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_erfc', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
@@ -49,8 +49,8 @@ erfc <- function(z_, relerr = 0) {
 #' @param relerr double, requested error
 #' @return complex vector
 #' @export
-Dawson <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z_, relerr)
+Dawson <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' compute w(z) = exp(-z^2) erfc(-iz) (Faddeeva function)
@@ -59,7 +59,7 @@ Dawson <- function(z_, relerr = 0) {
 #' @param relerr double, requested error
 #' @return complex vector
 #' @export
-Faddeeva_w <- function(z_, relerr = 0) {
-    .Call('RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z_, relerr)
+Faddeeva_w <- function(z, relerr = 0) {
+    .Call('RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 

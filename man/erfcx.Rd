@@ -4,12 +4,12 @@
 \alias{erfcx}
 \title{compute erfcx(z) = exp(z^2) erfc(z)}
 \usage{
-erfcx(z_, relerr = 0)
+erfcx(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector

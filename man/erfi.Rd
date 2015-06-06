@@ -4,12 +4,12 @@
 \alias{erfi}
 \title{compute erfi(z) = -i erf(iz), the imaginary error function}
 \usage{
-erfi(z_, relerr = 0)
+erfi(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector

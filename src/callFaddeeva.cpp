@@ -13,13 +13,13 @@ using namespace Rcpp;
 //' @importFrom Rcpp evalCpp
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erfcx(const ComplexVector& z_, 
+std::vector<std::complex<double> > erfcx(const ComplexVector& z, 
 					  double relerr=0) { 
-  std::vector<std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfcx(z[i], relerr);
+    result[i] = Faddeeva::erfcx(z_[i], relerr);
   }
   return result;
 }
@@ -31,13 +31,13 @@ std::vector<std::complex<double> > erfcx(const ComplexVector& z_,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erf(const ComplexVector& z_, 
+std::vector<std::complex<double> > erf(const ComplexVector& z, 
 					double relerr=0) { 
-  std::vector<std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erf(z[i], relerr);
+    result[i] = Faddeeva::erf(z_[i], relerr);
   }
   return result;
 }
@@ -49,13 +49,13 @@ std::vector<std::complex<double> > erf(const ComplexVector& z_,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erfi(const ComplexVector& z_, 
+std::vector<std::complex<double> > erfi(const ComplexVector& z, 
 					 double relerr=0) { 
-  std::vector<std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfi(z[i], relerr);
+    result[i] = Faddeeva::erfi(z_[i], relerr);
   }
   return result;
 }
@@ -67,13 +67,13 @@ std::vector<std::complex<double> > erfi(const ComplexVector& z_,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > erfc(const ComplexVector& z_, 
+std::vector< std::complex<double> > erfc(const ComplexVector& z, 
 					 double relerr=0) { 
-  std::vector< std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfc(z[i], relerr);
+    result[i] = Faddeeva::erfc(z_[i], relerr);
   }
   return result;
 }
@@ -85,13 +85,13 @@ std::vector< std::complex<double> > erfc(const ComplexVector& z_,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > Dawson(const ComplexVector& z_, 
+std::vector< std::complex<double> > Dawson(const ComplexVector& z, 
 					   double relerr=0) { 
-  std::vector< std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::Dawson(z[i], relerr);
+    result[i] = Faddeeva::Dawson(z_[i], relerr);
   }
   return result;
 }
@@ -103,13 +103,13 @@ std::vector< std::complex<double> > Dawson(const ComplexVector& z_,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > Faddeeva_w(const ComplexVector& z_,
+std::vector< std::complex<double> > Faddeeva_w(const ComplexVector& z,
 					      double relerr=0) { 
-  std::vector< std::complex<double> > z = as< std::vector< std::complex<double> > >(z_);
-  int N = z_.size(), i;
+  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
+  int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::w(z[i], relerr);
+    result[i] = Faddeeva::w(z_[i], relerr);
   }
   return result;
 }

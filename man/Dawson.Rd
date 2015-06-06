@@ -4,12 +4,12 @@
 \alias{Dawson}
 \title{compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)}
 \usage{
-Dawson(z_, relerr = 0)
+Dawson(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector

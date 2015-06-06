@@ -4,12 +4,12 @@
 \alias{Faddeeva_w}
 \title{compute w(z) = exp(-z^2) erfc(-iz) (Faddeeva function)}
 \usage{
-Faddeeva_w(z_, relerr = 0)
+Faddeeva_w(z, relerr = 0)
 }
 \arguments{
-\item{relerr}{double, requested error}
-
 \item{z}{complex vector}
+
+\item{relerr}{double, requested error}
 }
 \value{
 complex vector
