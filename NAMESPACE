@@ -2,6 +2,8 @@
 
 export(Dawson)
 export(Faddeeva_w)
+export(Gauss)
+export(Lorentz)
 export(Voigt)
 export(erf)
 export(erfc)
