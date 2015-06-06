@@ -16,7 +16,7 @@ Gauss <- function(x, x0, sigma){
 ##' @param x numeric vector
 ##' @param x0 scalar, peak position
 ##' @param sigma parameter of the gaussian
-##' @param sigma parameter of the lorentzian
+##' @param gamma parameter of the lorentzian
 ##' @param real logical, return only the real part of the complex Faddeeva
 ##' @param ... passed to Faddeeva_w
 ##' @return numeric or complex vector

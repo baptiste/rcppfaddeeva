@@ -13,11 +13,11 @@ Voigt(x, x0, sigma, gamma, real = TRUE, ...)
 
 \item{sigma}{parameter of the gaussian}
 
+\item{gamma}{parameter of the lorentzian}
+
 \item{real}{logical, return only the real part of the complex Faddeeva}
 
 \item{...}{passed to Faddeeva_w}
-
-\item{sigma}{parameter of the lorentzian}
 }
 \value{
 numeric or complex vector
