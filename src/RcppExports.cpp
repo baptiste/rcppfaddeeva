@@ -6,7 +6,7 @@
 using namespace Rcpp;
 
 // erfcx
-std::vector<std::complex<double> > erfcx(const ComplexVector& z, double relerr);
+ComplexVector erfcx(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_erfcx(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -18,7 +18,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // erf
-std::vector<std::complex<double> > erf(const ComplexVector& z, double relerr);
+ComplexVector erf(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_erf(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -30,7 +30,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // erfi
-std::vector<std::complex<double> > erfi(const ComplexVector& z, double relerr);
+ComplexVector erfi(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_erfi(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -42,7 +42,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // erfc
-std::vector< std::complex<double> > erfc(const ComplexVector& z, double relerr);
+ComplexVector erfc(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_erfc(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -54,7 +54,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // Dawson
-std::vector< std::complex<double> > Dawson(const ComplexVector& z, double relerr);
+ComplexVector Dawson(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_Dawson(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -66,7 +66,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // Faddeeva_w
-std::vector< std::complex<double> > Faddeeva_w(const ComplexVector& z, double relerr);
+ComplexVector Faddeeva_w(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;

@@ -13,15 +13,14 @@ using namespace Rcpp;
 //' @importFrom Rcpp evalCpp
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erfcx(const ComplexVector& z, 
-					  double relerr=0) { 
+ComplexVector erfcx(const ComplexVector& z, double relerr=0) { 
   std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::erfcx(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 //' compute erf(z), the error function of complex arguments
@@ -31,15 +30,14 @@ std::vector<std::complex<double> > erfcx(const ComplexVector& z,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erf(const ComplexVector& z, 
-					double relerr=0) { 
+ComplexVector erf(const ComplexVector& z, double relerr=0) { 
   std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::erf(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 //' compute erfi(z) = -i erf(iz), the imaginary error function
@@ -49,15 +47,14 @@ std::vector<std::complex<double> > erf(const ComplexVector& z,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector<std::complex<double> > erfi(const ComplexVector& z, 
-					 double relerr=0) { 
+ComplexVector erfi(const ComplexVector& z, double relerr=0) { 
   std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::erfi(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 //' compute erfc(z) = 1 - erf(z), the complementary error function
@@ -67,15 +64,14 @@ std::vector<std::complex<double> > erfi(const ComplexVector& z,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > erfc(const ComplexVector& z, 
-					 double relerr=0) { 
+ComplexVector erfc(const ComplexVector& z, double relerr=0) { 
   std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::erfc(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 //' compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
@@ -85,15 +81,14 @@ std::vector< std::complex<double> > erfc(const ComplexVector& z,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > Dawson(const ComplexVector& z, 
-					   double relerr=0) { 
+ComplexVector Dawson(const ComplexVector& z, double relerr=0) { 
   std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::Dawson(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 //' compute w(z) = exp(-z^2) erfc(-iz) (Faddeeva function)
@@ -103,15 +98,14 @@ std::vector< std::complex<double> > Dawson(const ComplexVector& z,
 //' @return complex vector
 //' @export
 // [[Rcpp::export]]
-std::vector< std::complex<double> > Faddeeva_w(const ComplexVector& z,
-					      double relerr=0) { 
+ComplexVector Faddeeva_w(const ComplexVector& z, double relerr=0) { 
   std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
   int N = z.size(), i;
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
     result[i] = Faddeeva::w(z_[i], relerr);
   }
-  return result;
+  return wrap(result);
 }
 
 
