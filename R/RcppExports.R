@@ -5,3 +5,7 @@ Dawson <- function(x) {
     .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', x)
 }
 
+Faddeeva_w <- function(z, relerr) {
+    .Call('RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z, relerr)
+}
+

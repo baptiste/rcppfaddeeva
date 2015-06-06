@@ -16,3 +16,15 @@ BEGIN_RCPP
     return __result;
 END_RCPP
 }
+// Faddeeva_w
+std::complex<double> Faddeeva_w(std::complex<double> z, double relerr);
+RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< std::complex<double> >::type z(zSEXP);
+    Rcpp::traits::input_parameter< double >::type relerr(relerrSEXP);
+    __result = Rcpp::wrap(Faddeeva_w(z, relerr));
+    return __result;
+END_RCPP
+}
