@@ -9,7 +9,8 @@ v <- Voigt(x, x0, 100, 30)
 l <- Lorentz(x, x0, 30)
 g <- Gauss(x, x0, 100)
 N <- length(x)
-c <- convolve(Gauss(x, 200, 100), Lorentz(x, 0, 30), type="o")[seq(N/2, length=N)]
+c <- convolve(RcppFaddeeva:::Gauss(x, 200, 100), 
+              RcppFaddeeva:::Lorentz(x, 0, 30), type="o")[seq(N/2, length=N)]
 
 matplot(x, cbind(v, l, g, c), t="l", lty=c(1,2,2,1), xlab="x", ylab="")
 legend("topleft", legend = c("Voigt", "Lorentz", "Gauss", "convolution"), bty="n",
