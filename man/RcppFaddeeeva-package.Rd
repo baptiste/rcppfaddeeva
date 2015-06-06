@@ -8,7 +8,7 @@
 Rcpp Bindings for the "Faddeeva" Library
 }
 \details{
-Access to error functions for arbitrary complex arguments is provided via the Faddeeva package by Steven G. Johnson
+Access to error functions for arbitrary complex arguments is provided via the Faddeeva package by Steven G. Johnson.
 }
 \references{
 The Faddeeva Package wiki page details the algorithms implemented by Steve G. Johnson,
