@@ -2,9 +2,11 @@ library(RcppFaddeeva)
 
 z <- 1:10 + 1i
 
-erfcx(z)
-erf(z)
-erfi(z)
-erfc(z)
-Dawson(z)
-Faddeeva_w(z)
+stopifnot(all.equal(length(z),
+                    length(erfcx(z)), 
+                    length(erf(z)),
+                    length(erfi(z)),
+                    length(erfc(z)),
+                    length(Dawson(z)),
+                    length(Faddeeva_w(z))))
+          
