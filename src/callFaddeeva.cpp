@@ -9,8 +9,6 @@ using namespace Rcpp;
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
-//' @useDynLib RcppFaddeeva
-//' @importFrom Rcpp evalCpp
 //' @export
 // [[Rcpp::export]]
 ComplexVector erfcx(const ComplexVector& z, double relerr=0) { 

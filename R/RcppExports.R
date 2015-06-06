@@ -6,8 +6,6 @@
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
-#' @useDynLib RcppFaddeeva
-#' @importFrom Rcpp evalCpp
 #' @export
 erfcx <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z, relerr)
