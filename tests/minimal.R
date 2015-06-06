@@ -1,5 +1,5 @@
 library(RcppFaddeeva)
-?RcppFaddeeva
+# ?RcppFaddeeva
 
 z <- 1:10 + 1i
 
