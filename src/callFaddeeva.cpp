@@ -15,14 +15,13 @@ using namespace Rcpp;
 //' Faddeeva_w(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector Faddeeva_w(const ComplexVector& z, double relerr=0) { 
-  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > Faddeeva_w(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::w(z_[i], relerr);
+    result[i] = Faddeeva::w(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 //' the scaled complementary error function
@@ -33,14 +32,13 @@ ComplexVector Faddeeva_w(const ComplexVector& z, double relerr=0) {
 //' erfcx(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector erfcx(const ComplexVector& z, double relerr=0) { 
-  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > erfcx(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfcx(z_[i], relerr);
+    result[i] = Faddeeva::erfcx(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 //'  the error function of complex arguments
@@ -51,14 +49,13 @@ ComplexVector erfcx(const ComplexVector& z, double relerr=0) {
 //' erf(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector erf(const ComplexVector& z, double relerr=0) { 
-  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > erf(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erf(z_[i], relerr);
+    result[i] = Faddeeva::erf(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 //' the imaginary error function 
@@ -69,14 +66,13 @@ ComplexVector erf(const ComplexVector& z, double relerr=0) {
 //' erfi(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector erfi(const ComplexVector& z, double relerr=0) { 
-  std::vector<std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > erfi(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfi(z_[i], relerr);
+    result[i] = Faddeeva::erfi(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 //' the complementary error function
@@ -87,14 +83,13 @@ ComplexVector erfi(const ComplexVector& z, double relerr=0) {
 //' erfc(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector erfc(const ComplexVector& z, double relerr=0) { 
-  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > erfc(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::erfc(z_[i], relerr);
+    result[i] = Faddeeva::erfc(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 //' the Dawson function
@@ -105,14 +100,13 @@ ComplexVector erfc(const ComplexVector& z, double relerr=0) {
 //' Dawson(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
-ComplexVector Dawson(const ComplexVector& z, double relerr=0) { 
-  std::vector< std::complex<double> > z_ = as< std::vector< std::complex<double> > >(z);
-  int N = z.size(), i;
+std::vector< std::complex<double> > Dawson(const std::vector< std::complex<double> >& z, double relerr=0) { 
+  int N = z.size();
   std::vector< std::complex<double> > result(N);
   for(int i=0; i<N; i++) {
-    result[i] = Faddeeva::Dawson(z_[i], relerr);
+    result[i] = Faddeeva::Dawson(z[i], relerr);
   }
-  return wrap(result);
+  return result;
 }
 
 
