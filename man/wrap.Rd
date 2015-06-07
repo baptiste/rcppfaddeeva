@@ -7,7 +7,7 @@
 \alias{erfc}
 \alias{erfcx}
 \alias{erfi}
-\title{compute erfcx(z) = exp(z^2) erfc(z)}
+\title{the scaled complementary error function}
 \usage{
 erfcx(z, relerr = 0)
 
@@ -25,66 +25,36 @@ Faddeeva_w(z, relerr = 0)
 \item{z}{complex vector}
 
 \item{relerr}{double, requested error}
-
-\item{z}{complex vector}
-
-\item{relerr}{double, requested error}
-
-\item{z}{complex vector}
-
-\item{relerr}{double, requested error}
-
-\item{z}{complex vector}
-
-\item{relerr}{double, requested error}
-
-\item{z}{complex vector}
-
-\item{relerr}{double, requested error}
-
-\item{z}{complex vector}
-
-\item{relerr}{double, requested error}
 }
 \value{
 complex vector
-
-complex vector
-
-complex vector
-
-complex vector
-
-complex vector
-
-complex vector
 }
 \description{
-compute erfcx(z) = exp(z^2) erfc(z)
+the scaled complementary error function
 
-compute erf(z), the error function of complex arguments
+the error function of complex arguments
 
-compute erfi(z) = -i erf(iz), the imaginary error function
+the imaginary error function
 
-compute erfc(z) = 1 - erf(z), the complementary error function
+the complementary error function
 
-compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
+the Dawson function
 
-compute w(z) = exp(-z^2) erfc(-iz) (Faddeeva function)
+the Faddeeva function
 }
 \section{Functions}{
 \itemize{
-\item \code{erfcx}: 
+\item \code{erfcx}: compute erfcx(z) = exp(z^2) erfc(z)
 
-\item \code{erf}: 
+\item \code{erf}: compute erf(z)
 
-\item \code{erfi}: 
+\item \code{erfi}: compute erfi(z) = -i erf(iz)
 
-\item \code{erfc}: 
+\item \code{erfc}: compute erfc(z) = 1 - erf(z)
 
-\item \code{Dawson}: 
+\item \code{Dawson}: compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
 
-\item \code{Faddeeva_w}: 
+\item \code{Faddeeva_w}: compute w(z) = exp(-z^2) erfc(-iz)
 }}
 \examples{
 erfcx(1:10 + 1i)

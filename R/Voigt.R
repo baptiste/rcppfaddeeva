@@ -1,32 +1,22 @@
 
 ##' Lorentzian
 ##'
-##' Lorentzian lineshape function
 ##' @title Lorentz
-##' @param x numeric vector
-##' @param x0 scalar, peak position
-##' @param gamma parameter of the lorentzian
-##' @return numeric vector
-##' @describeIn Voigt
+##' @describeIn Voigt Lorentzian lineshape function
+##' @inheritParams Voigt 
 ##' @export
 ##' @family helper_function
-##' @author baptiste Auguie
 Lorentz <- function(x, x0, gamma){
   gamma / (pi*((x -x0)^2 + gamma^2))
 }
 
 ##' Gaussian
 ##'
-##' Gaussian lineshape function
-##' @title Gauss
-##' @param x numeric vector
-##' @param x0 scalar, peak position
-##' @param sigma parameter of the gaussian
-##' @return numeric vector
-##' @describeIn Voigt
+##' @title Gauss 
+##' @describeIn Voigt Gaussian lineshape function
+##' @inheritParams Voigt
 ##' @export
 ##' @family helper_function
-##' @author baptiste Auguie
 Gauss <- function(x, x0, sigma){
   dnorm(x, x0, sd = sigma)
 }
@@ -44,7 +34,7 @@ Gauss <- function(x, x0, sigma){
 ##' @param ... passed to Faddeeva_w
 ##' @return numeric or complex vector
 ##' @author baptiste Auguie
-##' @describeIn Voigt
+##' @describeIn Voigt Voigt lineshape function
 ##' @family helper_function
 ##' @examples
 ##' ## should integrate to 1 in all cases

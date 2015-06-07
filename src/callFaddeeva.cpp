@@ -4,12 +4,10 @@ using namespace Rcpp;
 
 #include "Faddeeva.h"
 
-//' compute erfcx(z) = exp(z^2) erfc(z)
+//' the scaled complementary error function
 //'
-//' @param z complex vector
-//' @param relerr double, requested error
-//' @return complex vector
-//' @describeIn wrap
+//' @inheritParams Faddeeva_w 
+//' @describeIn wrap compute erfcx(z) = exp(z^2) erfc(z)
 //' @family wrapper
 //' @examples 
 //' erfcx(1:10 + 1i)
@@ -25,12 +23,10 @@ ComplexVector erfcx(const ComplexVector& z, double relerr=0) {
   return wrap(result);
 }
 
-//' compute erf(z), the error function of complex arguments
+//'  the error function of complex arguments
 //'
-//' @param z complex vector
-//' @param relerr double, requested error
-//' @return complex vector
-//' @describeIn wrap
+//' @inheritParams Faddeeva_w 
+//' @describeIn wrap compute erf(z)
 //' @family wrapper
 //' @examples 
 //' erf(1:10 + 1i)
@@ -46,12 +42,10 @@ ComplexVector erf(const ComplexVector& z, double relerr=0) {
   return wrap(result);
 }
 
-//' compute erfi(z) = -i erf(iz), the imaginary error function
+//' the imaginary error function 
 //'
-//' @param z complex vector
-//' @param relerr double, requested error
-//' @return complex vector
-//' @describeIn wrap
+//' @inheritParams Faddeeva_w 
+//' @describeIn wrap compute erfi(z) = -i erf(iz)
 //' @family wrapper
 //' @examples 
 //' erfi(1:10 + 1i)
@@ -67,12 +61,10 @@ ComplexVector erfi(const ComplexVector& z, double relerr=0) {
   return wrap(result);
 }
 
-//' compute erfc(z) = 1 - erf(z), the complementary error function
+//' the complementary error function
 //'
-//' @param z complex vector
-//' @param relerr double, requested error
-//' @return complex vector
-//' @describeIn wrap
+//' @inheritParams Faddeeva_w 
+//' @describeIn wrap compute erfc(z) = 1 - erf(z)
 //' @family wrapper
 //' @examples 
 //' erfc(1:10 + 1i)
@@ -88,12 +80,10 @@ ComplexVector erfc(const ComplexVector& z, double relerr=0) {
   return wrap(result);
 }
 
-//' compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
+//' the Dawson function
 //'
-//' @param z complex vector
-//' @param relerr double, requested error
-//' @return complex vector
-//' @describeIn wrap
+//' @inheritParams Faddeeva_w 
+//' @describeIn wrap compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
 //' @family wrapper
 //' @examples 
 //' Dawson(1:10 + 1i)
@@ -109,12 +99,12 @@ ComplexVector Dawson(const ComplexVector& z, double relerr=0) {
   return wrap(result);
 }
 
-//' compute w(z) = exp(-z^2) erfc(-iz) (Faddeeva function)
-//'
+//' the Faddeeva function
+//' @title Faddeeva_w
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
-//' @describeIn wrap
+//' @describeIn wrap compute w(z) = exp(-z^2) erfc(-iz)
 //' @family wrapper
 //' @examples 
 //' Faddeeva_w(1:10 + 1i)

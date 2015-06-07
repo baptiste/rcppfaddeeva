@@ -24,24 +24,8 @@ Voigt(x, x0, sigma, gamma, real = TRUE, ...)
 \item{real}{logical, return only the real part of the complex Faddeeva}
 
 \item{...}{passed to Faddeeva_w}
-
-\item{x}{numeric vector}
-
-\item{x0}{scalar, peak position}
-
-\item{x}{numeric vector}
-
-\item{x0}{scalar, peak position}
-
-\item{sigma}{parameter of the gaussian}
-
-\item{gamma}{parameter of the lorentzian}
 }
 \value{
-numeric vector
-
-numeric vector
-
 numeric or complex vector
 }
 \description{
@@ -52,19 +36,15 @@ Gaussian
 Voigt distribution
 }
 \details{
-Lorentzian lineshape function
-
-Gaussian lineshape function
-
 The Voigt function, corresponding to the convolution of a lorentzian and a gaussian distribution
 }
 \section{Functions}{
 \itemize{
-\item \code{Lorentz}: 
+\item \code{Lorentz}: Lorentzian lineshape function
 
-\item \code{Gauss}: 
+\item \code{Gauss}: Gaussian lineshape function
 
-\item \code{Voigt}: 
+\item \code{Voigt}: Voigt lineshape function
 }}
 \examples{
 ## should integrate to 1 in all cases
@@ -82,10 +62,6 @@ legend("topleft", legend = c("Voigt", "Lorentz", "Gauss", "Convolution"), bty="n
       lty=c(1,2,2,1), col=1:4)
 }
 \author{
-baptiste Auguie
-
-baptiste Auguie
-
 baptiste Auguie
 }
 
