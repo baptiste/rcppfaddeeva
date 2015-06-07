@@ -7,6 +7,7 @@
 ##' @param x0 scalar, peak position
 ##' @param gamma parameter of the lorentzian
 ##' @return numeric vector
+##' @describeIn Voigt
 ##' @export
 ##' @family helper_function
 ##' @author baptiste Auguie
@@ -22,6 +23,7 @@ Lorentz <- function(x, x0, gamma){
 ##' @param x0 scalar, peak position
 ##' @param sigma parameter of the gaussian
 ##' @return numeric vector
+##' @describeIn Voigt
 ##' @export
 ##' @family helper_function
 ##' @author baptiste Auguie
@@ -42,13 +44,15 @@ Gauss <- function(x, x0, sigma){
 ##' @param ... passed to Faddeeva_w
 ##' @return numeric or complex vector
 ##' @author baptiste Auguie
+##' @describeIn Voigt
+##' @family helper_function
 ##' @examples
 ##' ## should integrate to 1 in all cases
 ##' integrate(Voigt, -Inf, Inf, x0=400, sigma=50, gamma=100)
 ##' x <- seq(-1000, 1000)
 ##' x0 <- 200
-##' l <- RcppFaddeeva:::Lorentz(x, x0, 30)
-##' g <- RcppFaddeeva:::Gauss(x, x0, 100)
+##' l <- Lorentz(x, x0, 30)
+##' g <- Gauss(x, x0, 100)
 ##' N <- length(x)
 ##' c <- convolve(Gauss(x, 200, 100), 
 ##'               Lorentz(x, 0, 30), type="o")[seq(N/2, length=N)]

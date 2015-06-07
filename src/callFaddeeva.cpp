@@ -9,6 +9,10 @@ using namespace Rcpp;
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' erfcx(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector erfcx(const ComplexVector& z, double relerr=0) { 
@@ -26,6 +30,10 @@ ComplexVector erfcx(const ComplexVector& z, double relerr=0) {
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' erf(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector erf(const ComplexVector& z, double relerr=0) { 
@@ -43,6 +51,10 @@ ComplexVector erf(const ComplexVector& z, double relerr=0) {
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' erfi(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector erfi(const ComplexVector& z, double relerr=0) { 
@@ -60,6 +72,10 @@ ComplexVector erfi(const ComplexVector& z, double relerr=0) {
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' erfc(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector erfc(const ComplexVector& z, double relerr=0) { 
@@ -77,6 +93,10 @@ ComplexVector erfc(const ComplexVector& z, double relerr=0) {
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' Dawson(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector Dawson(const ComplexVector& z, double relerr=0) { 
@@ -94,6 +114,10 @@ ComplexVector Dawson(const ComplexVector& z, double relerr=0) {
 //' @param z complex vector
 //' @param relerr double, requested error
 //' @return complex vector
+//' @describeIn wrap
+//' @family wrapper
+//' @examples 
+//' Faddeeva_w(1:10 + 1i)
 //' @export
 // [[Rcpp::export]]
 ComplexVector Faddeeva_w(const ComplexVector& z, double relerr=0) { 

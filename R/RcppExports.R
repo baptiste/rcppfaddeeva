@@ -6,6 +6,10 @@
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' erfcx(1:10 + 1i)
 #' @export
 erfcx <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z, relerr)
@@ -16,6 +20,10 @@ erfcx <- function(z, relerr = 0) {
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' erf(1:10 + 1i)
 #' @export
 erf <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z, relerr)
@@ -26,6 +34,10 @@ erf <- function(z, relerr = 0) {
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' erfi(1:10 + 1i)
 #' @export
 erfi <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erfi', PACKAGE = 'RcppFaddeeva', z, relerr)
@@ -36,6 +48,10 @@ erfi <- function(z, relerr = 0) {
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' erfc(1:10 + 1i)
 #' @export
 erfc <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erfc', PACKAGE = 'RcppFaddeeva', z, relerr)
@@ -46,6 +62,10 @@ erfc <- function(z, relerr = 0) {
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' Dawson(1:10 + 1i)
 #' @export
 Dawson <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z, relerr)
@@ -56,6 +76,10 @@ Dawson <- function(z, relerr = 0) {
 #' @param z complex vector
 #' @param relerr double, requested error
 #' @return complex vector
+#' @describeIn wrap
+#' @family wrapper
+#' @examples 
+#' Faddeeva_w(1:10 + 1i)
 #' @export
 Faddeeva_w <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z, relerr)
