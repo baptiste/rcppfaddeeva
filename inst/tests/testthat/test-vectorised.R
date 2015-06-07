@@ -7,12 +7,11 @@ context("Checking the vectorised interface")
 
 test_that("All functions are vectorised", {
   
-  stopifnot(all.equal(length(z),
-                      length(erfcx(z)), 
-                      length(erf(z)),
-                      length(erfi(z)),
-                      length(erfc(z)),
-                      length(Dawson(z)),
-                      length(Faddeeva_w(z))))
-  
+  expect_equal(length(erfcx(z)), 10)
+  expect_equal(length(erf(z)), 10)
+  expect_equal(length(erfi(z)), 10)
+  expect_equal(length(erfc(z)), 10)
+  expect_equal(length(Dawson(z)), 10)
+  expect_equal(length(Faddeeva_w(z)), 10)
+                      
 })

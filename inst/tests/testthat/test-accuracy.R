@@ -141,15 +141,14 @@ complex(real=NaN, imaginary=0), 1.28247314848943e-02-2.10595728e-08i,
 )
 )
 
-test_that("Standard tests are accurate to 1e-13", {
   for(test in c("Faddeeva_w", "erfc", "erfcx", "erfi", "Dawson")){
-    print(test)
     z <- tests[[paste0("ref_", test)]][["z"]]
     ref <- tests[[paste0("ref_", test)]][["value"]]
     calc <- do.call(test, list(z))
-    rel <- pmax(abs(Re(ref - calc)) / Mod(ref + calc), 
-                abs(Im(ref - calc)) / Mod(ref + calc))
-    print(bad <- which(rel > 1e-13))
-    stopifnot(!any(bad))
+    rel.error <- pmax(abs(Re(ref - calc)) / Mod(ref + calc), 
+                      abs(Im(ref - calc)) / Mod(ref + calc))
+    
+    test_that(sprintf("Standard tests for %s are accurate to 1e-13", test), {
+    expect_equal(rel.error, 0*rel.error, tolerance = 1e-13)
+    })
   }
-})
