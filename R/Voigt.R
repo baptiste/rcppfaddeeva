@@ -1,31 +1,5 @@
-
-##' Lorentzian
-##'
-##' @title Lorentz
-##' @describeIn Voigt Lorentzian lineshape function
-##' @inheritParams Voigt 
-##' @export
-##' @family helper_function
-Lorentz <- function(x, x0, gamma){
-  gamma / (pi*((x -x0)^2 + gamma^2))
-}
-
-##' Gaussian
-##'
-##' @title Gauss 
-##' @describeIn Voigt Gaussian lineshape function
-##' @inheritParams Voigt
-##' @export
-##' @family helper_function
-Gauss <- function(x, x0, sigma){
-  dnorm(x, x0, sd = sigma)
-}
-
-
-##' Voigt distribution
-##'
-##' The Voigt function, corresponding to the convolution of a lorentzian and a gaussian distribution
-##' @title Voigt
+##' @description Voigt distribution
+##' @title The Voigt function, corresponding to the convolution of a lorentzian and a gaussian distribution
 ##' @param x numeric vector
 ##' @param x0 scalar, peak position
 ##' @param sigma parameter of the gaussian
@@ -56,6 +30,29 @@ Voigt <- function(x, x0, sigma, gamma, real = TRUE, ...){
   z <- (x - x0 + gamma*1i) / (sigma * sqrt(2))
   w <- Faddeeva_w(z, ...)
   if(real) return(Re(w) / (sigma * sqrt(2*pi))) else
-                     w / (sigma * sqrt(2*pi))
+    w / (sigma * sqrt(2*pi))
   
 }
+
+##' @description Lorentzian distribution
+##' @title Lorentz
+##' @describeIn Voigt Lorentzian lineshape function
+##' @inheritParams Voigt 
+##' @export
+##' @family helper_function
+Lorentz <- function(x, x0, gamma){
+  gamma / (pi*((x -x0)^2 + gamma^2))
+}
+
+##' @description Gaussian distribution
+##' @title Gauss 
+##' @describeIn Voigt Gaussian lineshape function
+##' @inheritParams Voigt
+##' @export
+##' @family helper_function
+Gauss <- function(x, x0, sigma){
+  dnorm(x, x0, sd = sigma)
+}
+
+
+

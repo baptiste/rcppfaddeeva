@@ -5,6 +5,18 @@
 
 using namespace Rcpp;
 
+// Faddeeva_w
+ComplexVector Faddeeva_w(const ComplexVector& z, double relerr);
+RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< const ComplexVector& >::type z(zSEXP);
+    Rcpp::traits::input_parameter< double >::type relerr(relerrSEXP);
+    __result = Rcpp::wrap(Faddeeva_w(z, relerr));
+    return __result;
+END_RCPP
+}
 // erfcx
 ComplexVector erfcx(const ComplexVector& z, double relerr);
 RcppExport SEXP RcppFaddeeva_erfcx(SEXP zSEXP, SEXP relerrSEXP) {
@@ -62,18 +74,6 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const ComplexVector& >::type z(zSEXP);
     Rcpp::traits::input_parameter< double >::type relerr(relerrSEXP);
     __result = Rcpp::wrap(Dawson(z, relerr));
-    return __result;
-END_RCPP
-}
-// Faddeeva_w
-ComplexVector Faddeeva_w(const ComplexVector& z, double relerr);
-RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject __result;
-    Rcpp::RNGScope __rngScope;
-    Rcpp::traits::input_parameter< const ComplexVector& >::type z(zSEXP);
-    Rcpp::traits::input_parameter< double >::type relerr(relerrSEXP);
-    __result = Rcpp::wrap(Faddeeva_w(z, relerr));
     return __result;
 END_RCPP
 }
