@@ -1,4 +1,0 @@
-RcppFaddeeva 0.1
------------------
-
-Initial commit
