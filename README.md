@@ -1,4 +1,4 @@
-## RcppFaddeeva [![Build Status](https://travis-ci.org/eddelbuettel/rcppfaddeeva.svg)](https://travis-ci.org/eddelbuettel/rcppfaddeeva) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
+## RcppFaddeeva [![Build Status](https://travis-ci.org/baptiste/rcppfaddeeva.svg)](https://travis-ci.org/baptiste/rcppfaddeeva) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Wrapper to the
 [Faddeeva Package by Steven G. Johnson](http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package)
