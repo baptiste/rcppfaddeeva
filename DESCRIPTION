@@ -9,7 +9,8 @@ Authors@R: c(person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",ro
 Description: Access to error functions for arbitrary complex arguments is
  provided via the "Faddeeva" package by Steven G. Johnson.
 License: GPL (>= 2)
-Imports: Rcpp (>= 0.11.0), knitr, testthat
+Imports: Rcpp (>= 0.11.0), knitr
+Suggests: testthat
 VignetteBuilder: knitr
 LinkingTo: Rcpp
 NeedsCompilation: yes

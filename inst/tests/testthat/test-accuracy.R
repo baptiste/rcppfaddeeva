@@ -1,5 +1,6 @@
 library(RcppFaddeeva)
-
+library(testthat)
+  
 ## parse stuff from c code
 # library(dplyr)
 # tmp  =  readLines("tmp.txt")
@@ -8,6 +9,9 @@ library(RcppFaddeeva)
 # eval(parse(text=paste0("dput(sapply(list(",paste(tmp, collapse='', sep=""), "), sum))")))
 
 
+context("Checking the accuracy")
+
+  
 tests <- list(
 ref_Faddeeva_w = list(
 z  =  c(624.2-0.26123i, -0.4+3i, 0.6+2i, -1+1i, -1-9i, -1+9i, -2.34545e-08+1.1234e+00i, 
@@ -136,13 +140,16 @@ complex(real=NaN, imaginary=0), 1.28247314848943e-02-2.10595728e-08i,
 5e-301+0i)
 )
 )
-for(test in c("Faddeeva_w", "erfc", "erfcx", "erfi", "Dawson")){
-  print(test)
-  z <- tests[[paste0("ref_", test)]][["z"]]
-  ref <- tests[[paste0("ref_", test)]][["value"]]
-  calc <- do.call(test, list(z))
-  rel <- pmax(abs(Re(ref - calc)) / Mod(ref + calc), abs(Im(ref - calc)) / Mod(ref + calc))
-  print(bad <- which(rel > 1e-13))
-  stopifnot(!any(bad))
-}
 
+test_that("Standard tests are accurate to 1e-13", {
+  for(test in c("Faddeeva_w", "erfc", "erfcx", "erfi", "Dawson")){
+    print(test)
+    z <- tests[[paste0("ref_", test)]][["z"]]
+    ref <- tests[[paste0("ref_", test)]][["value"]]
+    calc <- do.call(test, list(z))
+    rel <- pmax(abs(Re(ref - calc)) / Mod(ref + calc), 
+                abs(Im(ref - calc)) / Mod(ref + calc))
+    print(bad <- which(rel > 1e-13))
+    stopifnot(!any(bad))
+  }
+})
