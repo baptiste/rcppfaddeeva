@@ -3,9 +3,13 @@ Type: Package
 Title: Rcpp Bindings for the "Faddeeva" Library
 Version: 0.1.0
 Date: 2015-06-07
-Authors@R: c(person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = c("aut")), person("Steven", "Johnson", "G.", role = c("aut")), person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",role = c("aut", "cre")))
-Description: Access to error functions for arbitrary complex arguments is provided via the Faddeeva package by Steven G. Johnson.
+Authors@R: c(person("Dirk", "Eddelbuettel", email = "edd@debian.org", role =
+ c"aut"), person(c("Steven", "G."), "Johnson", role = "aut", comment="Author
+ of Faddeeva"), person("Baptiste", "Auguie", email =
+ "baptiste.auguie@gmail.com",role = c("aut", "cre")))
+Description: Access to error functions for arbitrary complex arguments is
+ provided via the Faddeeva package by Steven G. Johnson.
 License: GPL (>= 2)
-Imports: Rcpp (>= 0.11.6.2)
+Imports: Rcpp (>= 0.11.0)
 LinkingTo: Rcpp
 NeedsCompilation: yes
