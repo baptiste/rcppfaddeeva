@@ -1,7 +1,6 @@
-##' Rcpp Bindings for the "Faddeeva" Library
+##' 'Rcpp' Bindings for the 'Faddeeva' Package
 ##'
-##' Access to error functions for arbitrary complex arguments is provided via the Faddeeva package by Steven G. Johnson.
-##' 
+##' Access to a family of Gauss error functions for arbitrary complex arguments is provided via the 'Faddeeva' package by Steven G. Johnson (see <http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package> for more information).
 ##' @name RcppFaddeeva-package
 ##' @docType package
 ##' @useDynLib RcppFaddeeva
