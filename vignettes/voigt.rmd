@@ -4,8 +4,7 @@ Fast calculation of the Voigt lineshape via the Faddeeva function
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{voigt}
 -->
-The Voigt lineshape is extremly important in spectroscopy. The direct approach of numerical convolution between a Lorentzian (width $\gamma$) and a Gaussian (width $\sigma$) can be slow, and requires care to obtain sufficient accuracy if the width of the two functions is very different. In contrast, the Faddeeva function offers a straight-forward, reliable, and accurate calculation for any combination of $\gamma$ and $\sigma$. With the `RcppFaddeeva` package we leverage in `R` the elegant `c++` routines provided by Steve G. Johnson, with seamless bindings provided by `Rcpp`. 
-
+The Voigt lineshape is important in many fields of spectroscopy, yet the direct approach of numerical convolution between a Lorentzian and a Gaussian can be too slow. With the `RcppFaddeeva` package we leverage in `R` the elegant `c++` routines provided by Steve G. Johnson for the calculation of the closely related Faddeeva function, with seamless bindings provided by `Rcpp`. 
 
 ## Voigt profile, obtained from `Faddeeva_w`
 
@@ -33,13 +32,13 @@ integrate(Gauss, -Inf, Inf, x0=200, sigma=50)
 integrate(Voigt, -Inf, Inf, x0=200, sigma=50, gamma=100)
 ```
 
-An interesting side-effect of obtaining the Voigt lineshape from the imaginary part of the complex Faddeeva function is the direct access to its harmonic conjugate via the real part. This can be useful in modelling response functions linked by a Hilbert transform.
+An interesting side-effect of obtaining the Voigt lineshape via the imaginary part of the complex Faddeeva function is the direct access to its harmonic conjugate in the real part. This can be useful in modelling optical response functions connected by a Hilbert transform.
 
 ```{r complex}
 x <- seq(-1000, 1000)
 x0 <- 200
 v <- Voigt(x, x0, 100, 30, real = FALSE)
 matplot(x, cbind(Re(v), Im(v)), t="l", lty=c(1,2), xlab="x", ylab="", col=1)
-legend("topleft", legend = c("Real part", "Imaginary part"), bty="n",
+legend("topleft", legend = c("Imaginary part", "Real part"), bty="n",
       lty=c(1,2), col=1)
 ```
