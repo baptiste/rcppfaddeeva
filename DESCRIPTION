@@ -1,7 +1,7 @@
 Package: RcppFaddeeva
 Type: Package
 Title: 'Rcpp' Bindings for the 'Faddeeva' Package
-Version: 0.1.0
+Version: 0.1.1
 Date: 2015-06-07
 Authors@R: c(person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",role = c("aut", "cre")),
  person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = "aut"),
@@ -10,6 +10,6 @@ Description: Access to a family of Gauss error functions for arbitrary complex a
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.0), knitr
 Suggests: testthat
-VignetteBuilder: knitr
+VignetteBuilder: knitr::rmarkdown
 LinkingTo: Rcpp
 NeedsCompilation: yes
