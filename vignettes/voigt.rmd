@@ -1,7 +1,7 @@
 Fast calculation of the Voigt lineshape via the Faddeeva function
 =================================================================
 <!-- 
-%\VignetteEngine{knitr::knitr}
+%\VignetteEngine{knitr::rmarkdown}
 %\VignetteIndexEntry{voigt}
 -->
 The Voigt lineshape is important in many fields of spectroscopy, yet the direct approach of numerical convolution between a Lorentzian and a Gaussian can be too slow. With the `RcppFaddeeva` package we leverage in `R` the elegant `c++` routines provided by Steve G. Johnson for the calculation of the closely related Faddeeva function, with seamless bindings provided by `Rcpp`. 

@@ -10,6 +10,6 @@ Description: Access to a family of Gauss error functions for arbitrary complex a
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.0), knitr
 Suggests: testthat
-VignetteBuilder: knitr::rmarkdown
+VignetteBuilder: knitr
 LinkingTo: Rcpp
 NeedsCompilation: yes
