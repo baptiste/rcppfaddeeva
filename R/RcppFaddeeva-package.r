@@ -5,7 +5,6 @@
 ##' @docType package
 ##' @useDynLib RcppFaddeeva
 ##' @importFrom Rcpp evalCpp
-##' @importFrom knitr knit
 ##' @title RcppFaddeeva
 ##' @references
 ##' The Faddeeva Package wiki page details the algorithms implemented by Steve G. Johnson, 

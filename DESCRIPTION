@@ -8,8 +8,8 @@ Authors@R: c(person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",ro
  person(c("Steven", "G."), "Johnson", role = "aut", comment="Author of Faddeeva"))
 Description: Access to a family of Gauss error functions for arbitrary complex arguments is provided via the 'Faddeeva' package by Steven G. Johnson (see <http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package> for more information).
 License: GPL (>= 2)
-Imports: Rcpp (>= 0.11.0), knitr
-Suggests: testthat
+Imports: Rcpp (>= 0.11.0)
+Suggests: testthat, knitr
 VignetteBuilder: knitr
 LinkingTo: Rcpp
 NeedsCompilation: yes
