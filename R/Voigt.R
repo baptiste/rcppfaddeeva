@@ -52,10 +52,11 @@ Lorentz <- function(x, x0, gamma){
 ##' @title Gauss 
 ##' @describeIn Voigt Gaussian lineshape function
 ##' @inheritParams Voigt
+##' @importFrom stats dnorm
 ##' @export
 ##' @family helper_function
 Gauss <- function(x, x0, sigma){
-  dnorm(x, x0, sd = sigma)
+  stats::dnorm(x, x0, sd = sigma)
 }
 
 
