@@ -1,4 +1,7 @@
-## RcppFaddeeva [![Build Status](https://travis-ci.org/baptiste/rcppfaddeeva.svg)](https://travis-ci.org/baptiste/rcppfaddeeva) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
+## RcppFaddeeva [![Build Status](https://travis-ci.org/baptiste/rcppfaddeeva.svg)](https://travis-ci.org/baptiste/rcppfaddeeva)
+
+[![](http://www.r-pkg.org/badges/version/rcppfaddeeva)](http://cran.rstudio.com/web/packages/rcppfaddeeva/index.html)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/rcppfaddeeva)](http://cran.rstudio.com/web/packages/rcppfaddeeva/index.html)
 
 Wrapper to the
 [Faddeeva Package by Steven G. Johnson](http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package)
@@ -26,6 +29,4 @@ Baptiste Auguié and Dirk Eddelbuettel
 
 ### License
 
-GPL (>= 2)
-
-
+[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html)
