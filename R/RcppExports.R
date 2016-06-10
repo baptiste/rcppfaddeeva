@@ -8,7 +8,7 @@
 #' @return complex vector
 #' @describeIn wrap compute w(z) = exp(-z^2) erfc(-iz)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' Faddeeva_w(1:10 + 1i)
 #' @export
 Faddeeva_w <- function(z, relerr = 0) {
@@ -16,10 +16,10 @@ Faddeeva_w <- function(z, relerr = 0) {
 }
 
 #' the scaled complementary error function
-#' @inheritParams Faddeeva_w 
+#' @inheritParams Faddeeva_w
 #' @describeIn wrap compute erfcx(z) = exp(z^2) erfc(z)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' erfcx(1:10 + 1i)
 #' @export
 erfcx <- function(z, relerr = 0) {
@@ -27,21 +27,21 @@ erfcx <- function(z, relerr = 0) {
 }
 
 #'  the error function of complex arguments
-#' @inheritParams Faddeeva_w 
+#' @inheritParams Faddeeva_w
 #' @describeIn wrap compute erf(z)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' erf(1:10 + 1i)
 #' @export
 erf <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
-#' the imaginary error function 
-#' @inheritParams Faddeeva_w 
+#' the imaginary error function
+#' @inheritParams Faddeeva_w
 #' @describeIn wrap compute erfi(z) = -i erf(iz)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' erfi(1:10 + 1i)
 #' @export
 erfi <- function(z, relerr = 0) {
@@ -49,10 +49,10 @@ erfi <- function(z, relerr = 0) {
 }
 
 #' the complementary error function
-#' @inheritParams Faddeeva_w 
+#' @inheritParams Faddeeva_w
 #' @describeIn wrap compute erfc(z) = 1 - erf(z)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' erfc(1:10 + 1i)
 #' @export
 erfc <- function(z, relerr = 0) {
@@ -60,13 +60,17 @@ erfc <- function(z, relerr = 0) {
 }
 
 #' the Dawson function
-#' @inheritParams Faddeeva_w 
+#' @inheritParams Faddeeva_w
 #' @describeIn wrap compute Dawson(z) = sqrt(pi)/2  *  exp(-z^2) * erfi(z)
 #' @family wrapper
-#' @examples 
+#' @examples
 #' Dawson(1:10 + 1i)
 #' @export
 Dawson <- function(z, relerr = 0) {
     .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
+# Register entry points for exported C++ functions
+methods::setLoadAction(function(ns) {
+    .Call('RcppFaddeeva_RcppExport_registerCCallable', PACKAGE = 'RcppFaddeeva')
+})
