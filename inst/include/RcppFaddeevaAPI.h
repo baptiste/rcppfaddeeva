@@ -1,9 +1,10 @@
 /*
-/*  RcppFaddeeva - 'Rcpp' Bindings for the 'Faddeeva' Package
-/*
-/* This header file provides the interface used by other packages, */
-/* and should be included once per package.                        */
-/*
+ *  RcppFaddeeva - 'Rcpp' Bindings for the 'Faddeeva' Package
+ *
+ * This header file provides the interface used by other packages,
+ * and should be included once per package.
+ *
+ */
 
 #ifndef _RcppFaddeeva_API_h_
 #define _RcppFaddeeva_API_h_
