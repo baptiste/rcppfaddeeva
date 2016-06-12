@@ -1,7 +1,7 @@
 ## RcppFaddeeva [![Build Status](https://travis-ci.org/baptiste/rcppfaddeeva.svg)](https://travis-ci.org/baptiste/rcppfaddeeva)
 
-[![](http://www.r-pkg.org/badges/version/rcppfaddeeva)](http://cran.rstudio.com/web/packages/rcppfaddeeva/index.html)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/rcppfaddeeva)](http://cran.rstudio.com/web/packages/rcppfaddeeva/index.html)
+[![](http://www.r-pkg.org/badges/version/RcppFaddeeva)](http://cran.rstudio.com/web/packages/RcppFaddeeva/index.html)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/RcppFaddeeva)](http://cran.rstudio.com/web/packages/RcppFaddeeva/index.html)
 
 Wrapper to the
 [Faddeeva Package by Steven G. Johnson](http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package)
