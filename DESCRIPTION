@@ -1,15 +1,24 @@
 Package: RcppFaddeeva
 Type: Package
 Title: 'Rcpp' Bindings for the 'Faddeeva' Package
-Version: 0.1.1
-Date: 2015-06-07
+Version: 0.2.0
+Date: 2016-06-13
 Authors@R: c(person("Baptiste", "Auguie", email = "baptiste.auguie@gmail.com",role = c("aut", "cre")),
  person("Dirk", "Eddelbuettel", email = "edd@debian.org", role = "aut"),
- person(c("Steven", "G."), "Johnson", role = "aut", comment="Author of Faddeeva"))
-Description: Access to a family of Gauss error functions for arbitrary complex arguments is provided via the 'Faddeeva' package by Steven G. Johnson (see <http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package> for more information).
+ person(c("Steven", "G."), "Johnson", role = "aut", comment="Author of Faddeeva"),
+ person("Dennis", "Feehan", role = "ctb"))
+Description: Access to a family of Gauss error functions for arbitrary
+    complex arguments is provided via the 'Faddeeva' package by Steven G. Johnson
+    (see <http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package> for more
+    information).
 License: GPL (>= 2)
-Imports: Rcpp (>= 0.11.0), stats
-Suggests: testthat, knitr
+Imports:
+    Rcpp (>= 0.11.0),
+    stats
+Suggests:
+    testthat,
+    knitr
 VignetteBuilder: knitr
 LinkingTo: Rcpp
 NeedsCompilation: yes
+RoxygenNote: 5.0.1.9000
