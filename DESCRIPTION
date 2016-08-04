@@ -19,6 +19,8 @@ Suggests:
     testthat,
     knitr
 VignetteBuilder: knitr
+URL: https://github.com/baptiste/rcppfaddeeva
+BugReports: https://github.com/baptiste/rcppfaddeeva/issues
 LinkingTo: Rcpp
 NeedsCompilation: yes
 RoxygenNote: 5.0.1.9000
