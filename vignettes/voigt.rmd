@@ -56,7 +56,7 @@ An interesting side-effect of obtaining the Voigt lineshape via the imaginary pa
 x <- seq(-1000, 1000)
 x0 <- 200
 v <- Voigt(x, x0, 100, 30, real = FALSE)
-matplot(x, cbind(Re(v), Im(v)), t="l", lty=c(1,2), xlab="x", ylab="", col=1, lwd = 2)
+matplot(x, cbind(Re(v), Im(v)), t="l", lty=c(1,2), xlab="", ylab="", col=1, lwd = 2)
 legend("topleft", legend = c("Imaginary part", "Real part"), bty="n",
       lty=c(1,2), col=1, lwd = 2)
 ```
