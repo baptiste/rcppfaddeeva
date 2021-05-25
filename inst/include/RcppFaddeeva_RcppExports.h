@@ -16,7 +16,7 @@ namespace RcppFaddeeva {
             require("RcppFaddeeva", Rcpp::Named("quietly") = true);
             typedef int(*Ptr_validate)(const char*);
             static Ptr_validate p_validate = (Ptr_validate)
-                R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_RcppExport_validate");
+                R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_RcppExport_validate");
             if (!p_validate(sig)) {
                 throw Rcpp::function_not_exported(
                     "C++ function with signature '" + std::string(sig) + "' not found in RcppFaddeeva");
@@ -29,17 +29,19 @@ namespace RcppFaddeeva {
         static Ptr_Faddeeva_w p_Faddeeva_w = NULL;
         if (p_Faddeeva_w == NULL) {
             validateSignature("std::vector< std::complex<double> >(*Faddeeva_w)(const std::vector< std::complex<double> >&,double)");
-            p_Faddeeva_w = (Ptr_Faddeeva_w)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_Faddeeva_w");
+            p_Faddeeva_w = (Ptr_Faddeeva_w)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_Faddeeva_w");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_Faddeeva_w(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_Faddeeva_w(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 
@@ -48,17 +50,19 @@ namespace RcppFaddeeva {
         static Ptr_erfcx p_erfcx = NULL;
         if (p_erfcx == NULL) {
             validateSignature("std::vector< std::complex<double> >(*erfcx)(const std::vector< std::complex<double> >&,double)");
-            p_erfcx = (Ptr_erfcx)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_erfcx");
+            p_erfcx = (Ptr_erfcx)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_erfcx");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_erfcx(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_erfcx(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 
@@ -67,17 +71,19 @@ namespace RcppFaddeeva {
         static Ptr_erf p_erf = NULL;
         if (p_erf == NULL) {
             validateSignature("std::vector< std::complex<double> >(*erf)(const std::vector< std::complex<double> >&,double)");
-            p_erf = (Ptr_erf)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_erf");
+            p_erf = (Ptr_erf)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_erf");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_erf(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_erf(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 
@@ -86,17 +92,19 @@ namespace RcppFaddeeva {
         static Ptr_erfi p_erfi = NULL;
         if (p_erfi == NULL) {
             validateSignature("std::vector< std::complex<double> >(*erfi)(const std::vector< std::complex<double> >&,double)");
-            p_erfi = (Ptr_erfi)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_erfi");
+            p_erfi = (Ptr_erfi)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_erfi");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_erfi(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_erfi(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 
@@ -105,17 +113,19 @@ namespace RcppFaddeeva {
         static Ptr_erfc p_erfc = NULL;
         if (p_erfc == NULL) {
             validateSignature("std::vector< std::complex<double> >(*erfc)(const std::vector< std::complex<double> >&,double)");
-            p_erfc = (Ptr_erfc)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_erfc");
+            p_erfc = (Ptr_erfc)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_erfc");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_erfc(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_erfc(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 
@@ -124,17 +134,19 @@ namespace RcppFaddeeva {
         static Ptr_Dawson p_Dawson = NULL;
         if (p_Dawson == NULL) {
             validateSignature("std::vector< std::complex<double> >(*Dawson)(const std::vector< std::complex<double> >&,double)");
-            p_Dawson = (Ptr_Dawson)R_GetCCallable("RcppFaddeeva", "RcppFaddeeva_Dawson");
+            p_Dawson = (Ptr_Dawson)R_GetCCallable("RcppFaddeeva", "_RcppFaddeeva_Dawson");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_Dawson(Rcpp::wrap(z), Rcpp::wrap(relerr));
+            rcpp_result_gen = p_Dawson(Shield<SEXP>(Rcpp::wrap(z)), Shield<SEXP>(Rcpp::wrap(relerr)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<std::vector< std::complex<double> > >(rcpp_result_gen);
     }
 

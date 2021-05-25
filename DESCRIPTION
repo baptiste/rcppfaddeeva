@@ -17,10 +17,11 @@ Imports:
     stats
 Suggests:
     testthat,
-    knitr
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
 URL: https://github.com/plasmonics/rcppfaddeeva
 BugReports: https://github.com/plasmonics/rcppfaddeeva/issues
 LinkingTo: Rcpp
 NeedsCompilation: yes
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 7.1.1

@@ -15,4 +15,3 @@ The Faddeeva Package wiki page details the algorithms implemented by Steve G. Jo
 \url{http://ab-initio.mit.edu/wiki/index.php/Faddeeva_Package}
 }
 \keyword{packagelibrary}
-

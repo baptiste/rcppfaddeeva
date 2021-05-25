@@ -10,7 +10,7 @@ using namespace Rcpp;
 
 // Faddeeva_w
 std::vector< std::complex<double> > Faddeeva_w(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_Faddeeva_w_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_Faddeeva_w_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -19,16 +19,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_Faddeeva_w_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_Faddeeva_w_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -41,7 +45,7 @@ RcppExport SEXP RcppFaddeeva_Faddeeva_w(SEXP zSEXP, SEXP relerrSEXP) {
 }
 // erfcx
 std::vector< std::complex<double> > erfcx(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_erfcx_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_erfcx_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -50,16 +54,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_erfcx(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_erfcx(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_erfcx_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_erfcx_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -72,7 +80,7 @@ RcppExport SEXP RcppFaddeeva_erfcx(SEXP zSEXP, SEXP relerrSEXP) {
 }
 // erf
 std::vector< std::complex<double> > erf(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_erf_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_erf_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -81,16 +89,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_erf(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_erf(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_erf_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_erf_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -103,7 +115,7 @@ RcppExport SEXP RcppFaddeeva_erf(SEXP zSEXP, SEXP relerrSEXP) {
 }
 // erfi
 std::vector< std::complex<double> > erfi(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_erfi_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_erfi_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -112,16 +124,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_erfi(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_erfi(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_erfi_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_erfi_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -134,7 +150,7 @@ RcppExport SEXP RcppFaddeeva_erfi(SEXP zSEXP, SEXP relerrSEXP) {
 }
 // erfc
 std::vector< std::complex<double> > erfc(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_erfc_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_erfc_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -143,16 +159,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_erfc(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_erfc(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_erfc_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_erfc_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -165,7 +185,7 @@ RcppExport SEXP RcppFaddeeva_erfc(SEXP zSEXP, SEXP relerrSEXP) {
 }
 // Dawson
 std::vector< std::complex<double> > Dawson(const std::vector< std::complex<double> >& z, double relerr);
-static SEXP RcppFaddeeva_Dawson_try(SEXP zSEXP, SEXP relerrSEXP) {
+static SEXP _RcppFaddeeva_Dawson_try(SEXP zSEXP, SEXP relerrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const std::vector< std::complex<double> >& >::type z(zSEXP);
@@ -174,16 +194,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP RcppFaddeeva_Dawson(SEXP zSEXP, SEXP relerrSEXP) {
+RcppExport SEXP _RcppFaddeeva_Dawson(SEXP zSEXP, SEXP relerrSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(RcppFaddeeva_Dawson_try(zSEXP, relerrSEXP));
+        rcpp_result_gen = PROTECT(_RcppFaddeeva_Dawson_try(zSEXP, relerrSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
     }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
@@ -196,7 +220,7 @@ RcppExport SEXP RcppFaddeeva_Dawson(SEXP zSEXP, SEXP relerrSEXP) {
 }
 
 // validate (ensure exported C++ functions exist before calling them)
-static int RcppFaddeeva_RcppExport_validate(const char* sig) { 
+static int _RcppFaddeeva_RcppExport_validate(const char* sig) { 
     static std::set<std::string> signatures;
     if (signatures.empty()) {
         signatures.insert("std::vector< std::complex<double> >(*Faddeeva_w)(const std::vector< std::complex<double> >&,double)");
@@ -210,13 +234,29 @@ static int RcppFaddeeva_RcppExport_validate(const char* sig) {
 }
 
 // registerCCallable (register entry points for exported C++ functions)
-RcppExport SEXP RcppFaddeeva_RcppExport_registerCCallable() { 
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_Faddeeva_w", (DL_FUNC)RcppFaddeeva_Faddeeva_w_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_erfcx", (DL_FUNC)RcppFaddeeva_erfcx_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_erf", (DL_FUNC)RcppFaddeeva_erf_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_erfi", (DL_FUNC)RcppFaddeeva_erfi_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_erfc", (DL_FUNC)RcppFaddeeva_erfc_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_Dawson", (DL_FUNC)RcppFaddeeva_Dawson_try);
-    R_RegisterCCallable("RcppFaddeeva", "RcppFaddeeva_RcppExport_validate", (DL_FUNC)RcppFaddeeva_RcppExport_validate);
+RcppExport SEXP _RcppFaddeeva_RcppExport_registerCCallable() { 
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_Faddeeva_w", (DL_FUNC)_RcppFaddeeva_Faddeeva_w_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_erfcx", (DL_FUNC)_RcppFaddeeva_erfcx_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_erf", (DL_FUNC)_RcppFaddeeva_erf_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_erfi", (DL_FUNC)_RcppFaddeeva_erfi_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_erfc", (DL_FUNC)_RcppFaddeeva_erfc_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_Dawson", (DL_FUNC)_RcppFaddeeva_Dawson_try);
+    R_RegisterCCallable("RcppFaddeeva", "_RcppFaddeeva_RcppExport_validate", (DL_FUNC)_RcppFaddeeva_RcppExport_validate);
     return R_NilValue;
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_RcppFaddeeva_Faddeeva_w", (DL_FUNC) &_RcppFaddeeva_Faddeeva_w, 2},
+    {"_RcppFaddeeva_erfcx", (DL_FUNC) &_RcppFaddeeva_erfcx, 2},
+    {"_RcppFaddeeva_erf", (DL_FUNC) &_RcppFaddeeva_erf, 2},
+    {"_RcppFaddeeva_erfi", (DL_FUNC) &_RcppFaddeeva_erfi, 2},
+    {"_RcppFaddeeva_erfc", (DL_FUNC) &_RcppFaddeeva_erfc, 2},
+    {"_RcppFaddeeva_Dawson", (DL_FUNC) &_RcppFaddeeva_Dawson, 2},
+    {"_RcppFaddeeva_RcppExport_registerCCallable", (DL_FUNC) &_RcppFaddeeva_RcppExport_registerCCallable, 0},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_RcppFaddeeva(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

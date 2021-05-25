@@ -12,7 +12,7 @@
 #' Faddeeva_w(1:10 + 1i)
 #' @export
 Faddeeva_w <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_Faddeeva_w', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' the scaled complementary error function
@@ -23,7 +23,7 @@ Faddeeva_w <- function(z, relerr = 0) {
 #' erfcx(1:10 + 1i)
 #' @export
 erfcx <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_erfcx', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #'  the error function of complex arguments
@@ -34,7 +34,7 @@ erfcx <- function(z, relerr = 0) {
 #' erf(1:10 + 1i)
 #' @export
 erf <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_erf', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' the imaginary error function
@@ -45,7 +45,7 @@ erf <- function(z, relerr = 0) {
 #' erfi(1:10 + 1i)
 #' @export
 erfi <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_erfi', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_erfi', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' the complementary error function
@@ -56,7 +56,7 @@ erfi <- function(z, relerr = 0) {
 #' erfc(1:10 + 1i)
 #' @export
 erfc <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_erfc', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_erfc', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 #' the Dawson function
@@ -67,10 +67,10 @@ erfc <- function(z, relerr = 0) {
 #' Dawson(1:10 + 1i)
 #' @export
 Dawson <- function(z, relerr = 0) {
-    .Call('RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z, relerr)
+    .Call('_RcppFaddeeva_Dawson', PACKAGE = 'RcppFaddeeva', z, relerr)
 }
 
 # Register entry points for exported C++ functions
 methods::setLoadAction(function(ns) {
-    .Call('RcppFaddeeva_RcppExport_registerCCallable', PACKAGE = 'RcppFaddeeva')
+    .Call('_RcppFaddeeva_RcppExport_registerCCallable', PACKAGE = 'RcppFaddeeva')
 })
